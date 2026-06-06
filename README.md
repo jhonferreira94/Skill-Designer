@@ -48,3 +48,15 @@ Os scripts em `scripts/` mantêm o repositório e a pasta local
   faz push (use depois de editar a skill localmente).
 - **`scripts/sync-from-git.ps1`** — faz `git pull` e copia do repositório →
   skill local (use depois de atualizar o repositório).
+
+### Como rodar (Windows)
+
+```powershell
+# Local -> GitHub (após editar a skill)
+powershell -ExecutionPolicy Bypass -File .\scripts\sync-to-git.ps1 -Message "sua mensagem"
+
+# GitHub -> Local (após atualizar o repositório)
+powershell -ExecutionPolicy Bypass -File .\scripts\sync-from-git.ps1
+```
+
+> Se você tiver o PowerShell 7 instalado, pode trocar `powershell` por `pwsh`.
