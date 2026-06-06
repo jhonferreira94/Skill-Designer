@@ -77,6 +77,20 @@ theme: {
 <Text className="font-body text-md">Corpo</Text>
 ```
 
+### Escala tipográfica nomeada
+Mapeie papéis semânticos para os tamanhos (mantenha consistência em todo o app):
+
+| Papel | Uso | Sugestão |
+|---|---|---|
+| **H1** | Título principal da tela | `text-2xl` + `font-bold` (`Heading size="2xl"`) |
+| **H2** | Seções | `text-xl` + `font-bold` (`Heading size="xl"`) |
+| **H3** | Subseções | `text-lg` + `font-medium` (`Heading size="lg"`) |
+| **Body** | Texto principal | `text-md` + `font-normal` (`Text size="md"`) |
+| **Caption** | Informações auxiliares | `text-sm`/`text-xs` + `text-typography-500` |
+
+No Gluestack use `Heading` (com `size`) para H1–H3 e `Text` (com `size`) para
+Body/Caption.
+
 ## Espaçamento
 
 Use a escala `space` do Gluestack/Tailwind (classes `p-*`, `m-*`, `gap-*`).
