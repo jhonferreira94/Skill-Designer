@@ -24,4 +24,10 @@ $refDst = Join-Path $skillLocal "references"
 if (-not (Test-Path $refDst)) { New-Item -ItemType Directory -Path $refDst | Out-Null }
 Copy-Item -Path (Join-Path $repoRoot "references\*") -Destination $refDst -Recurse -Force
 
+$rulesDst = Join-Path $skillLocal "rules"
+if (-not (Test-Path $rulesDst)) { New-Item -ItemType Directory -Path $rulesDst | Out-Null }
+if (Test-Path (Join-Path $repoRoot "rules")) {
+    Copy-Item -Path (Join-Path $repoRoot "rules\*") -Destination $rulesDst -Recurse -Force
+}
+
 Write-Host "Skill local atualizada em: $skillLocal" -ForegroundColor Green

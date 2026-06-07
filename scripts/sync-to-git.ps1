@@ -20,6 +20,10 @@ $refDst = Join-Path $repoRoot "references"
 if (-not (Test-Path $refDst)) { New-Item -ItemType Directory -Path $refDst | Out-Null }
 Copy-Item -Path (Join-Path $skillLocal "references\*") -Destination $refDst -Recurse -Force
 
+$rulesDst = Join-Path $repoRoot "rules"
+if (-not (Test-Path $rulesDst)) { New-Item -ItemType Directory -Path $rulesDst | Out-Null }
+Copy-Item -Path (Join-Path $skillLocal "rules\*") -Destination $rulesDst -Recurse -Force
+
 Push-Location $repoRoot
 try {
     git add -A

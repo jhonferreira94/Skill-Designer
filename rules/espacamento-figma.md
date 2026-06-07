@@ -1,4 +1,4 @@
-# Construção no Figma via MCP (Talk to Figma)
+# Espaçamento no Figma via MCP (Talk to Figma)
 
 Regras e armadilhas ao **criar/editar telas diretamente no Figma** com o
 plugin *Cursor Talk to Figma MCP*. O objetivo é garantir espaçamento e

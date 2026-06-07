@@ -123,7 +123,7 @@ Verifique a [checklist de acessibilidade](./references/accessibility.md) (WCAG 2
 - **Ao construir no Figma via MCP**: todo frame com Auto Layout ganha um
   **padding fantasma de 10px** se o padding não for definido. Sempre defina o
   padding explicitamente (0 ou valor da escala), iguale gaps horizontais e
-  verticais, e rode a checklist de espaçamento. Consulte [construção no Figma via MCP](./references/figma-mcp.md).
+  verticais, e rode a checklist de espaçamento. Consulte [regra de espaçamento no Figma](./rules/espacamento-figma.md).
 
 ### 10. Revisão final
 - [ ] Projetos de referência foram solicitados e considerados.
@@ -166,4 +166,7 @@ clara e contribuir para o objetivo da jornada.
 - [Heurísticas de Nielsen](./references/nielsen-heuristics.md)
 - [Leis de UX](./references/ux-laws.md)
 - [Acessibilidade](./references/accessibility.md)
-- [Construção no Figma via MCP](./references/figma-mcp.md)
+
+## Regras
+Convenções e armadilhas práticas, mantidas em [./rules/](./rules/README.md) (separadas das referências conceituais):
+- [Espaçamento no Figma via MCP](./rules/espacamento-figma.md) — padding fantasma de 10px, checklist de espaçamento e limitações do plugin.
