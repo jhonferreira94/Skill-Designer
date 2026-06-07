@@ -120,6 +120,10 @@ Verifique a [checklist de acessibilidade](./references/accessibility.md) (WCAG 2
 - **Hierarquia**, **escaneabilidade** (títulos, subtítulos, cards, agrupamentos),
   **consistência**, **espaço em branco**, **estados**
   (default/hover/focus/active/disabled/loading/error) e **responsividade** mobile-first.
+- **Ao construir no Figma via MCP**: todo frame com Auto Layout ganha um
+  **padding fantasma de 10px** se o padding não for definido. Sempre defina o
+  padding explicitamente (0 ou valor da escala), iguale gaps horizontais e
+  verticais, e rode a checklist de espaçamento. Consulte [construção no Figma via MCP](./references/figma-mcp.md).
 
 ### 10. Revisão final
 - [ ] Projetos de referência foram solicitados e considerados.
@@ -129,6 +133,8 @@ Verifique a [checklist de acessibilidade](./references/accessibility.md) (WCAG 2
 - [ ] Heurísticas de Nielsen e leis de UX verificadas.
 - [ ] Contraste, foco e estados aprovados.
 - [ ] Layout responsivo testado.
+- [ ] (Se no Figma via MCP) Padding fantasma de 10px verificado; gaps
+      horizontais e verticais iguais; checklist de espaçamento aplicada.
 
 ## Saída obrigatória
 Ao entregar o design de uma tela/fluxo, **sempre** apresente nesta estrutura:
@@ -160,3 +166,4 @@ clara e contribuir para o objetivo da jornada.
 - [Heurísticas de Nielsen](./references/nielsen-heuristics.md)
 - [Leis de UX](./references/ux-laws.md)
 - [Acessibilidade](./references/accessibility.md)
+- [Construção no Figma via MCP](./references/figma-mcp.md)
