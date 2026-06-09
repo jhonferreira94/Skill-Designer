@@ -57,6 +57,9 @@ references/         -> explicações mais detalhadas de cada tema:
 ├── nielsen-heuristics.md      -> regras de "fácil de usar"
 ├── ux-laws.md                 -> leis de design (Hick, Fitts...)
 └── accessibility.md           -> incluir todo mundo (acessibilidade)
+rules/              -> regras práticas operacionais:
+├── espacamento-figma.md       -> padding fantasma de 10px no Auto Layout
+└── acesso-inicial-figma.md    -> login + link do arquivo antes de editar
 scripts/            -> atalhos para sincronizar com o GitHub (ver mais abaixo)
 ```
 
@@ -82,6 +85,24 @@ skill sozinha. Exemplos:
 - "Me ajuda a desenhar a tela de cadastro"
 - "Quais cores combinam para esse app?"
 - "Esse fluxo está fácil de usar?"
+
+### Fluxo obrigatório para tarefas em Figma
+
+Sempre que a demanda envolver criar/editar no Figma, a IA deve pedir isso
+antes de começar:
+
+1. Confirmar que o usuário está logado no Figma.
+2. Pedir o link completo do arquivo.
+3. Pedir, quando possível, o link da seção/frame com `node-id`.
+
+Sem essas 3 confirmações, a IA não deve iniciar edição.
+
+Onde pegar o link do Figma:
+- barra de endereço do navegador;
+- botão **Share** -> **Copy link**;
+- link da seleção/frame (para incluir `node-id`).
+
+Regra detalhada: [rules/acesso-inicial-figma.md](rules/acesso-inicial-figma.md).
 
 ---
 
