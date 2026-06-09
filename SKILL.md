@@ -69,8 +69,14 @@ A UI é construída com **[Gluestack UI](https://gluestack.io/)** (v2, sobre Nat
 
 ## Procedimento
 
-### 0. Pedir referências (obrigatório)
-Pergunte e confirme os **projetos modelo** antes de tudo (ver regra acima).
+### 0. Validar acesso Figma e pedir referências (obrigatório)
+Antes de qualquer criação/edição no Figma, confirme:
+- se o usuário está logado no Figma;
+- o link completo do arquivo;
+- quando possível, o link da seção/frame com `node-id`.
+
+Depois disso, pergunte e confirme os **projetos modelo** antes de tudo (ver regra acima).
+Consulte também [regra de acesso inicial ao Figma](./rules/acesso-inicial-figma.md).
 
 ### 1. Product Thinking
 Entenda o problema antes de desenhar. Consulte [product thinking](./references/product-thinking.md).
@@ -126,6 +132,8 @@ Verifique a [checklist de acessibilidade](./references/accessibility.md) (WCAG 2
   verticais, e rode a checklist de espaçamento. Consulte [regra de espaçamento no Figma](./rules/espacamento-figma.md).
 
 ### 10. Revisão final
+- [ ] (Se no Figma via MCP) Login no Figma e link do arquivo foram confirmados
+  antes de editar (preferir link com `node-id`).
 - [ ] Projetos de referência foram solicitados e considerados.
 - [ ] Product thinking, arquitetura da informação e wireframe mental definidos.
 - [ ] Benchmarking aplicado.
@@ -170,3 +178,4 @@ clara e contribuir para o objetivo da jornada.
 ## Regras
 Convenções e armadilhas práticas, mantidas em [./rules/](./rules/README.md) (separadas das referências conceituais):
 - [Espaçamento no Figma via MCP](./rules/espacamento-figma.md) — padding fantasma de 10px, checklist de espaçamento e limitações do plugin.
+- [Acesso inicial ao Figma via MCP](./rules/acesso-inicial-figma.md) — sempre solicitar login no Figma, link do arquivo e, quando possível, link com `node-id` antes de iniciar qualquer edição.
