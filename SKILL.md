@@ -76,6 +76,13 @@ Identifique a escala do pedido antes de começar:
   jornadas, sitemap, telas, ações, estados, regras de negócio, exceções).
   Acione quando o pedido é "crie/especifique o produto X" de ponta a ponta.
 
+Quando o produto já está desenhado e o pedido é **entregar para o dev**
+("handoff", "documentação", "organizar o arquivo", "preparar para
+desenvolvimento"), entre na **fase de handoff**: empacote o entregável com o
+playbook [Handoff e Documentação](./references/handoff-documentacao.md) e
+certifique com a regra [Checklist de Handoff](./rules/handoff-checklist.md).
+Critério de aceite: **o dev implementa sem precisar perguntar nada.**
+
 ## Procedimento
 
 ### 0. Pedir referências e identificar a escala (obrigatório)
@@ -160,6 +167,18 @@ Verifique a [checklist de acessibilidade](./references/accessibility.md) (WCAG 2
 - [ ] Layout responsivo testado.
 - [ ] (Se no Figma via MCP) Padding fantasma de 10px verificado; gaps
       horizontais e verticais iguais; checklist de espaçamento aplicada.
+- [ ] (Se em handoff) Arquivo nas 19 seções e [Checklist de Handoff](./rules/handoff-checklist.md)
+      certificada — sem itens em aberto; dev implementa sem perguntar.
+
+### 11. Handoff e documentação (quando for entregar)
+Se o trabalho vai para um time de desenvolvimento, empacote o entregável:
+- Organize o arquivo nas **19 seções** (Cover → Checklist) do playbook
+  [Handoff e Documentação](./references/handoff-documentacao.md), com os
+  templates de página, componente, modal, drawer, formulário, interação,
+  tabela, responsividade e anotações de dev.
+- **Certifique** com a regra [Checklist de Handoff](./rules/handoff-checklist.md)
+  (presença das 19 seções + checklist de qualidade + anotação por tela).
+- Só declare **"Pronto para desenvolvimento"** sem itens ⚠️/❌ em aberto.
 
 ## Saída obrigatória
 Ao entregar o design de uma tela/fluxo, **sempre** apresente nesta estrutura:
@@ -198,6 +217,7 @@ clara e contribuir para o objetivo da jornada.
 - [Estados de Interface](./references/estados-de-interface.md)
 - [Regras de Negócio](./references/regras-de-negocio.md)
 - [Fluxos Excepcionais](./references/fluxos-excepcionais.md)
+- [Handoff e Documentação (entrega ao dev)](./references/handoff-documentacao.md)
 
 ## Regras
 Convenções e armadilhas práticas, mantidas em [./rules/](./rules/README.md) (separadas das referências conceituais):
@@ -205,3 +225,4 @@ Convenções e armadilhas práticas, mantidas em [./rules/](./rules/README.md) (
 - [Princípios de construção de tela (mobile)](./rules/principios-tela-mobile.md) — 10 princípios acionáveis por tela (foco, hierarquia, toque, feedback, estados), com checklist e cross-referência às heurísticas/leis.
 - [UX Writing e Microcopy (pt-BR)](./rules/microcopy-conteudo.md) — copy de botões (`verbo + objeto`), modais de confirmação, feedback de sucesso/erro, empty states e loading.
 - [Acesso inicial ao Figma via MCP](./rules/acesso-inicial-figma.md) — antes de editar no Figma, confirmar login + link do arquivo (+ node-id quando possível).
+- [Checklist de Handoff](./rules/handoff-checklist.md) — certifica o entregável (19 seções + checklist de qualidade + anotação por tela); só declara "pronto para dev" sem pendências.
