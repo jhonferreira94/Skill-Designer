@@ -43,7 +43,9 @@ Entregue nesta sequência, com profundidade de PD Sênior:
     confirmação (ver [Estados de Interface](./estados-de-interface.md)).
 12. **Regras de negócio** — campos obrigatórios, status e transições; ver
     [Regras de Negócio](./regras-de-negocio.md) (tabelas de estado).
-13. **Componentes do Design System** — inventário (ver lista no SKILL.md / Gluestack).
+13. **Componentes do Design System** — inventário mapeado ao
+    [Gluestack](./gluestack-components.md) (botões, inputs, selects, tabelas,
+    cards, badges, tabs, stepper, upload, modais, drawers, toasts...).
 14. **Casos extremos e exceções** — ver [Fluxos Excepcionais](./fluxos-excepcionais.md).
 
 ## Formato de sitemap

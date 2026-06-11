@@ -1,6 +1,6 @@
 ---
 name: designer
-description: 'Skill completa de Product Design / UX-UI com base na biblioteca Gluestack UI. Use ao criar ou revisar produtos e telas: arquitetura da informação, design system e tokens (cores, tipografia, espaçamento), componentes, product thinking, heurísticas de Nielsen, análise de produtos de referência (benchmarking), acessibilidade (WCAG) e qualidade visual. Tokens e componentes seguem o Gluestack; paleta de cores e tipografia podem ser customizadas. Trigger words: design, designer, UX, UI, produto, product thinking, arquitetura da informação, fluxo, jornada, heurísticas, Nielsen, usabilidade, benchmarking, referência, layout, cores, tipografia, espaçamento, tokens, contraste, acessibilidade, WCAG, ARIA, componente, tema, gluestack, gluestack-ui, design system.'
+description: 'Skill completa de Product Design / UX-UI com base na biblioteca Gluestack UI. Use ao criar ou revisar produtos e telas: especificação completa de produto (perfis, permissões, jornadas, sitemap, regras de negócio), arquitetura da informação, design system e tokens (cores, tipografia, espaçamento), componentes, product thinking, heurísticas de Nielsen, análise de produtos de referência (benchmarking), acessibilidade (WCAG), UX writing/microcopy e qualidade visual. Tokens e componentes seguem o Gluestack; paleta de cores e tipografia podem ser customizadas. Trigger words: design, designer, UX, UI, produto, product thinking, especificação, escopo, arquitetura da informação, sitemap, fluxo, jornada, perfil, permissões, regras de negócio, estados, heurísticas, Nielsen, usabilidade, benchmarking, referência, layout, cores, tipografia, espaçamento, tokens, contraste, acessibilidade, WCAG, ARIA, componente, tema, gluestack, gluestack-ui, design system, copy, microcopy, UX writing.'
 argument-hint: 'Descreva o produto, fluxo, tela ou componente a criar/revisar'
 ---
 
@@ -69,7 +69,7 @@ A UI é construída com **[Gluestack UI](https://gluestack.io/)** (v2, sobre Nat
 
 ## Duas escalas de trabalho
 Identifique a escala do pedido antes de começar:
-- **Tela/fluxo único** → use a *Saída obrigatória* de 10 pontos (mais abaixo).
+- **Tela/fluxo único** → use a *Saída obrigatória* (mais abaixo).
   É o caso mais comum (desenhar ou revisar uma tela ou fluxo específico).
 - **Produto completo / módulo grande** → use o playbook
   [Especificação de Produto](./references/especificacao-produto.md) (perfis,
@@ -78,8 +78,12 @@ Identifique a escala do pedido antes de começar:
 
 ## Procedimento
 
-### 0. Pedir referências (obrigatório)
+### 0. Pedir referências e identificar a escala (obrigatório)
 Pergunte e confirme os **projetos modelo** antes de tudo (ver regra acima).
+Em seguida, identifique a **escala** (ver "Duas escalas de trabalho"):
+- **Produto completo** → siga o playbook [Especificação de Produto](./references/especificacao-produto.md)
+  e use os passos 1–10 abaixo para cada tela do produto.
+- **Tela/fluxo único** → siga os passos 1–10 direto.
 
 ### 1. Product Thinking
 Entenda o problema antes de desenhar. Consulte [product thinking](./references/product-thinking.md).
@@ -88,6 +92,9 @@ Entenda o problema antes de desenhar. Consulte [product thinking](./references/p
 ### 2. Arquitetura da Informação
 Estruture conteúdo, navegação e fluxos. Consulte [arquitetura da informação](./references/info-architecture.md).
 - Mapeie entidades, hierarquia, navegação (menu principal/secundário, breadcrumbs, acessos rápidos) e a jornada principal (entrada → processo → saída).
+- Com **múltiplos perfis**, defina a matriz de [perfis e permissões](./references/perfis-e-permissoes.md).
+- Além do fluxo feliz, preveja os [fluxos excepcionais](./references/fluxos-excepcionais.md)
+  (sem permissão, sessão expirada, offline, 404, arquivo inválido, duplicidade).
 
 ### 3. Wireframe mental
 Antes da UI final, descreva a estrutura da tela:
@@ -115,6 +122,8 @@ Monte telas compondo os componentes do Gluestack. Consulte [componentes](./refer
 - Reuse componentes e props de estado (`size`, `isInvalid`, `isDisabled`, `isFocused`, `isReadOnly`).
 - Use `FormControl` para rótulos, ajuda e erros.
 - Estilize via `className` (NativeWind) com tokens do tema.
+- Especifique o **comportamento** de cada elemento interativo (clique → validação →
+  loading → feedback → erro): ver [ações de componentes](./references/acoes-de-componentes.md).
 
 ### 7. Heurísticas de Nielsen e leis de UX
 Avalie usabilidade com as 10 heurísticas e as leis de UX (Hick, Fitts,
@@ -125,10 +134,13 @@ Verifique a [checklist de acessibilidade](./references/accessibility.md) (WCAG 2
 - Contraste **4.5:1** (texto) / **3:1** (texto grande/ícones); foco visível;
   teclado; semântica antes de ARIA; não dependa só de cor.
 
-### 9. Qualidade visual
+### 9. Qualidade visual e conteúdo
 - **Hierarquia**, **escaneabilidade** (títulos, subtítulos, cards, agrupamentos),
-  **consistência**, **espaço em branco**, **estados**
-  (default/hover/focus/active/disabled/loading/error) e **responsividade** mobile-first.
+  **consistência**, **espaço em branco** e **responsividade** mobile-first.
+- **Estados da tela e dos componentes**: projete default, loading, vazio, erro,
+  sucesso e confirmação — ver [estados de interface](./references/estados-de-interface.md).
+- **Microcopy**: botões `verbo + objeto`, feedback que nomeia o objeto, erro que
+  orienta o próximo passo — ver [regra de UX writing](./rules/microcopy-conteudo.md).
 - **Ao construir no Figma via MCP**: todo frame com Auto Layout ganha um
   **padding fantasma de 10px** se o padding não for definido. Sempre defina o
   padding explicitamente (0 ou valor da escala), iguale gaps horizontais e
@@ -141,6 +153,10 @@ Verifique a [checklist de acessibilidade](./references/accessibility.md) (WCAG 2
 - [ ] Componentes e tokens do Gluestack usados (sem recriar o que já existe).
 - [ ] Heurísticas de Nielsen e leis de UX verificadas.
 - [ ] Contraste, foco e estados aprovados.
+- [ ] Estados da tela projetados (loading, vazio, erro, sucesso, confirmação).
+- [ ] Microcopy segue `verbo + objeto`; erros orientam o próximo passo.
+- [ ] Fluxos excepcionais cobertos (permissão, sessão, offline, 404, duplicidade).
+- [ ] Com múltiplos perfis: UI reflete a matriz de permissões (oculta/desabilita).
 - [ ] Layout responsivo testado.
 - [ ] (Se no Figma via MCP) Padding fantasma de 10px verificado; gaps
       horizontais e verticais iguais; checklist de espaçamento aplicada.
@@ -151,12 +167,13 @@ Ao entregar o design de uma tela/fluxo, **sempre** apresente nesta estrutura:
 2. **Usuário-Alvo** — quem utilizará.
 3. **Estrutura da Página** — mapa completo da interface.
 4. **Componentes Necessários** — lista detalhada (mapeados ao Gluestack).
-5. **Fluxo do Usuário** — passo a passo.
-6. **Melhorias de UX** — sugestões estratégicas.
-7. **Recomendações de UI** — diretrizes visuais.
-8. **Considerações de Acessibilidade** — boas práticas.
-9. **Possíveis Problemas** — riscos da solução.
-10. **Oportunidades de Otimização** — melhorias futuras.
+5. **Fluxo do Usuário** — passo a passo (incluindo erros e exceções).
+6. **Estados da Tela** — loading, vazio, erro, sucesso (quando aplicável).
+7. **Melhorias de UX** — sugestões estratégicas.
+8. **Recomendações de UI** — diretrizes visuais (incluindo microcopy-chave).
+9. **Considerações de Acessibilidade** — boas práticas.
+10. **Possíveis Problemas** — riscos da solução.
+11. **Oportunidades de Otimização** — melhorias futuras.
 
 ## Regra de prototipação
 Ao gerar interfaces, priorize: simplicidade, clareza, hierarquia visual,
