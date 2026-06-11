@@ -204,3 +204,4 @@ Convenções e armadilhas práticas, mantidas em [./rules/](./rules/README.md) (
 - [Espaçamento no Figma via MCP](./rules/espacamento-figma.md) — padding fantasma de 10px, checklist de espaçamento e limitações do plugin.
 - [Princípios de construção de tela (mobile)](./rules/principios-tela-mobile.md) — 10 princípios acionáveis por tela (foco, hierarquia, toque, feedback, estados), com checklist e cross-referência às heurísticas/leis.
 - [UX Writing e Microcopy (pt-BR)](./rules/microcopy-conteudo.md) — copy de botões (`verbo + objeto`), modais de confirmação, feedback de sucesso/erro, empty states e loading.
+- [Acesso inicial ao Figma via MCP](./rules/acesso-inicial-figma.md) — antes de editar no Figma, confirmar login + link do arquivo (+ node-id quando possível).

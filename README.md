@@ -21,6 +21,10 @@ Quando ativada, a IA passa a pensar como um designer sênior e te ajuda com:
 
 - **Entender o problema antes de desenhar** — quem vai usar o app, qual a
   dificuldade da pessoa e o que o negócio precisa.
+- **Especificar um produto inteiro** — quando você pede "crie o produto X",
+  a IA monta tudo de ponta a ponta: tipos de usuário e o que cada um pode
+  fazer, mapa de todas as telas, regras de funcionamento e até o que acontece
+  quando algo dá errado (sem internet, arquivo errado etc.).
 - **Organizar a informação** — onde fica cada coisa, como é o menu, qual o
   caminho que o usuário percorre.
 - **Olhar exemplos de referência** — comparar com apps que servem de modelo
@@ -29,6 +33,10 @@ Quando ativada, a IA passa a pensar como um designer sênior e te ajuda com:
   organizada e reutilizável.
 - **Montar as telas** usando componentes prontos da biblioteca
   **[Gluestack UI](https://gluestack.io/)** (botões, campos, caixas de aviso etc.).
+- **Escrever os textos das telas** — nomes de botões, mensagens de erro e de
+  sucesso que qualquer pessoa entende (ex.: "Excluir vídeo" em vez de só "Excluir").
+- **Prever todos os estados da tela** — carregando, vazia, com erro, com
+  sucesso — para nada ficar "sem resposta" para o usuário.
 - **Checar se está fácil de usar** — usando regras conhecidas de usabilidade
   (Heurísticas de Nielsen, Lei de Hick, Lei de Fitts).
 - **Garantir acessibilidade** — que pessoas com dificuldades visuais ou motoras
@@ -56,10 +64,18 @@ references/         -> explicações mais detalhadas de cada tema:
 ├── gluestack-components.md    -> os componentes prontos (botões, campos...)
 ├── nielsen-heuristics.md      -> regras de "fácil de usar"
 ├── ux-laws.md                 -> leis de design (Hick, Fitts...)
-└── accessibility.md           -> incluir todo mundo (acessibilidade)
+├── accessibility.md           -> incluir todo mundo (acessibilidade)
+├── especificacao-produto.md   -> roteiro para especificar um produto inteiro
+├── perfis-e-permissoes.md     -> tipos de usuário e o que cada um pode fazer
+├── acoes-de-componentes.md    -> o que acontece ao clicar em cada botão
+├── estados-de-interface.md    -> tela carregando, vazia, com erro, com sucesso
+├── regras-de-negocio.md       -> campos obrigatórios, status e transições
+└── fluxos-excepcionais.md     -> o que fazer quando algo dá errado
 rules/              -> regras práticas operacionais:
 ├── espacamento-figma.md       -> padding fantasma de 10px no Auto Layout
-└── acesso-inicial-figma.md    -> login + link do arquivo antes de editar
+├── acesso-inicial-figma.md    -> login + link do arquivo antes de editar
+├── principios-tela-mobile.md  -> 10 princípios para construir cada tela
+└── microcopy-conteudo.md      -> como escrever botões, mensagens e avisos
 scripts/            -> atalhos para sincronizar com o GitHub (ver mais abaixo)
 ```
 
@@ -85,6 +101,8 @@ skill sozinha. Exemplos:
 - "Me ajuda a desenhar a tela de cadastro"
 - "Quais cores combinam para esse app?"
 - "Esse fluxo está fácil de usar?"
+- "Especifique o produto completo a partir desse escopo"
+- "Revise os textos dos botões dessa tela"
 
 ### Fluxo obrigatório para tarefas em Figma
 
