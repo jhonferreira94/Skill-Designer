@@ -67,6 +67,15 @@ A UI é construída com **[Gluestack UI](https://gluestack.io/)** (v2, sobre Nat
 - Definir/usar o **design system** e tokens do Gluestack.
 - Montar **componentes** e garantir **acessibilidade** e **qualidade visual**.
 
+## Duas escalas de trabalho
+Identifique a escala do pedido antes de começar:
+- **Tela/fluxo único** → use a *Saída obrigatória* de 10 pontos (mais abaixo).
+  É o caso mais comum (desenhar ou revisar uma tela ou fluxo específico).
+- **Produto completo / módulo grande** → use o playbook
+  [Especificação de Produto](./references/especificacao-produto.md) (perfis,
+  jornadas, sitemap, telas, ações, estados, regras de negócio, exceções).
+  Acione quando o pedido é "crie/especifique o produto X" de ponta a ponta.
+
 ## Procedimento
 
 ### 0. Pedir referências (obrigatório)
@@ -166,8 +175,15 @@ clara e contribuir para o objetivo da jornada.
 - [Heurísticas de Nielsen](./references/nielsen-heuristics.md)
 - [Leis de UX](./references/ux-laws.md)
 - [Acessibilidade](./references/accessibility.md)
+- [Especificação de Produto (end-to-end)](./references/especificacao-produto.md)
+- [Perfis e Permissões](./references/perfis-e-permissoes.md)
+- [Ações de Componentes](./references/acoes-de-componentes.md)
+- [Estados de Interface](./references/estados-de-interface.md)
+- [Regras de Negócio](./references/regras-de-negocio.md)
+- [Fluxos Excepcionais](./references/fluxos-excepcionais.md)
 
 ## Regras
 Convenções e armadilhas práticas, mantidas em [./rules/](./rules/README.md) (separadas das referências conceituais):
 - [Espaçamento no Figma via MCP](./rules/espacamento-figma.md) — padding fantasma de 10px, checklist de espaçamento e limitações do plugin.
 - [Princípios de construção de tela (mobile)](./rules/principios-tela-mobile.md) — 10 princípios acionáveis por tela (foco, hierarquia, toque, feedback, estados), com checklist e cross-referência às heurísticas/leis.
+- [UX Writing e Microcopy (pt-BR)](./rules/microcopy-conteudo.md) — copy de botões (`verbo + objeto`), modais de confirmação, feedback de sucesso/erro, empty states e loading.
